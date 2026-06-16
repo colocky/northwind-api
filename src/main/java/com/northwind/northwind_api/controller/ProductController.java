@@ -30,7 +30,7 @@ public class ProductController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/{productId}")
+    @PostMapping
     public ResponseEntity<Product> createArtist(@RequestBody Product product) {
         Product created = productService.createProduct(product);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
