@@ -5,8 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table (name = "Categories")
-public class Categories {
+@Table (name = "Category")
+public class Category {
 
     @Column (name = "CategoryName")
     private String categoryName;
