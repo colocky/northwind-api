@@ -20,7 +20,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "Category")
-    private Category category;
+    private Category categoryName;
 
     @Column(name = "CategoryID")
     private Integer categoryId;
@@ -103,10 +103,10 @@ public class Product {
     public void setDiscontinued(Boolean discontinued) {
         this.discontinued = discontinued;
     }
-    public Category getCategory() {
-        return category;
+    public Category getCategoryName() {
+        return categoryName;
     }
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryName(Category categoryName) {
+        this.categoryName = categoryName;
     }
 }
