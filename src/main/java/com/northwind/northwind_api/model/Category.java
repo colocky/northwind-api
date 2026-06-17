@@ -1,8 +1,6 @@
 package com.northwind.northwind_api.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table (name = "Category")
@@ -11,6 +9,8 @@ public class Category {
     @Column (name = "CategoryName")
     private String categoryName;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "CategoryId")
     private Integer categoryId;
 
