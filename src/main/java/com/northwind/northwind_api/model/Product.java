@@ -18,6 +18,9 @@ public class Product {
     @Column(name = "SupplierID")
     private Integer supplierId;
 
+    @Column(name = "Category")
+    private String category;
+
     @Column(name = "CategoryID")
     private Integer categoryId;
 
@@ -98,5 +101,11 @@ public class Product {
     }
     public void setDiscontinued(Boolean discontinued) {
         this.discontinued = discontinued;
+    }
+    public String getCategory() {
+        return category;
+    }
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
