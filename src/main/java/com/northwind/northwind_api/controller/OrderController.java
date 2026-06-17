@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -23,7 +22,7 @@ public class OrderController {
         return ResponseEntity.ok(orderService.getAllOrders());
     }
 
-    @GetMapping("{/orderId}")
+    @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrderById(@PathVariable Integer orderId) {
         return orderService.getOrderById(orderId)
                 .map(ResponseEntity::ok)
@@ -59,7 +58,7 @@ public class OrderController {
         return ResponseEntity.ok(orders);
     }
 
-    @GetMapping("/{customerId}")
+    @GetMapping("/{employeeId}")
     public ResponseEntity<List<Order>> getAllOrdersByEmployeeId(@PathVariable Integer employeeId) {
         List<Order> orders = orderService.getAllOrdersByEmployeeId(employeeId);
         if (orders.isEmpty()) {
