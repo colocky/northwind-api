@@ -18,8 +18,9 @@ public class Product {
     @Column(name = "SupplierID")
     private Integer supplierId;
 
-    @Column(name = "Category")
-    private String category;
+    @ManyToOne
+    @JoinColumn(name = "Category")
+    private Category category;
 
     @Column(name = "CategoryID")
     private Integer categoryId;
