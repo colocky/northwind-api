@@ -3,7 +3,7 @@ package com.northwind.northwind_api.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "Category")
+@Table (name = "Categories")
 public class Category {
 
     @Column (name = "CategoryName")
@@ -14,7 +14,7 @@ public class Category {
     @Column (name = "CategoryId")
     private Integer categoryId;
 
-    @Column (name = "CategoryDescription")
+    @Column (name = "Description")
     private String categoryDescription;
 
 

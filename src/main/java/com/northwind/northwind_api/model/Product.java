@@ -19,11 +19,8 @@ public class Product {
     private Integer supplierId;
 
     @ManyToOne
-    @JoinColumn(name = "Category")
-    private Category categoryName;
-
-    @Column(name = "CategoryID")
-    private Integer categoryId;
+    @JoinColumn(name = "CategoryID")
+    private Category category;
 
     @Column(name = "QuantityPerUnit")
     private String quantityPerUnit;
@@ -61,12 +58,6 @@ public class Product {
     public void setSupplierId(Integer supplierId) {
         this.supplierId = supplierId;
     }
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
     public String getQuantityPerUnit() {
         return quantityPerUnit;
     }
@@ -103,10 +94,12 @@ public class Product {
     public void setDiscontinued(Boolean discontinued) {
         this.discontinued = discontinued;
     }
-    public Category getCategoryName() {
-        return categoryName;
+
+    public String getCategory() {
+        return category.getCategoryName();
     }
-    public void setCategoryName(Category categoryName) {
-        this.categoryName = categoryName;
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
