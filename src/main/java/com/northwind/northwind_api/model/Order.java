@@ -15,7 +15,7 @@ public class Order {
     private Integer orderId;
 
     @Column(name = "CustomerID")
-    private Integer customerId;
+    private String customerId;
 
     @Column(name = "EmployeeID")
     private Integer employeeId;
@@ -43,11 +43,11 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public Integer getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 

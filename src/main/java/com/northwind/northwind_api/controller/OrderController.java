@@ -50,7 +50,7 @@ public class OrderController {
     }
 
     @GetMapping("/{customerId}")
-    public ResponseEntity<List<Order>> getAllOrdersByCustomerId(@PathVariable Integer customerId) {
+    public ResponseEntity<List<Order>> getAllOrdersByCustomerId(@PathVariable String customerId) {
         List<Order> orders = orderService.getAllOrdersByCustomerId(customerId);
         if (orders.isEmpty()) {
             return ResponseEntity.notFound().build();

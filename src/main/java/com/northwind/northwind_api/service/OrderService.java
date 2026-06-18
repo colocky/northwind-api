@@ -45,7 +45,7 @@ public class OrderService {
         return false;
     }
 
-    public List<Order> getAllOrdersByCustomerId(Integer customerId) {
+    public List<Order> getAllOrdersByCustomerId(String customerId) {
         return orderRepository.getByCustomerId(customerId);
     }
 
