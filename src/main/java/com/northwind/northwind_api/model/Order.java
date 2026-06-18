@@ -14,6 +14,10 @@ public class Order {
     @Column(name = "OrderID")
     private Integer orderId;
 
+    @ManyToOne
+    @JoinColumn(name = "Customer")
+    private  Customer customer;
+
     @Column(name = "CustomerID")
     private String customerId;
 
